@@ -1,9 +1,10 @@
-A=int(input())
-B=list(map(int,input().split()))
-a1=0
-for a in range(len(B)-2):
-    for y in range(a+1,len(B)-1):
-        for z in range(b+1,len(B)):
-            if B[a]<B[b]<B[z] and a<b<z:
-                a1=a1+1
-print(a1)
+    
+x=int(input())
+arr=list(map(int,input().split()))
+y=0
+for i in range(0,x-2):
+	for j in range(1,x-1):
+		for k in range(2,x):
+			if((arr[i] < arr[j]) and (arr[j] < arr[k])):
+				y+=1
+print(y)
