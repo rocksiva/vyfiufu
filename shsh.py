@@ -1,13 +1,11 @@
-q= int(input())
-y=[]
-for m in range(0,q):
- chr=input()
- y.append(chr)
-n=[]
-for m in zip(*y):
- if(m.count(m[0])==len(m)):
-  n.append(m[0])
- else:
-  break
-print(''.join(n))
-© 2019 GitHub, Inc.
+kan,jan=map(str,input().split())
+s=0
+if len(kan)>len(jan):
+  kan,jan=jan,kan
+i=0
+while i<len(kan):
+  s+=(ord(jan[i])-ord(kan[i]))
+  i+=1
+for i in range(i,len(jan)):
+  s+=ord(jan[i])-ord('a')+1
+print(s)
